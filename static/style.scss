@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+
+$background-color: #030303;
+$primary-color: #FFFFFF;
+$secondary-color: #CCCCCC;
+$accent-color: #0056FF;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rowdies", sans-serif;
+}
+
+body {
+    margin: 20px;
+    background-color: $background-color;
+    color: $primary-color;
+}
+
+.content {
+    background-color: $background-color;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid hsl(0, 0%, 12%);
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    h1 {
+        font-size: 50px;
+        margin: 10px;
+    }
+
+    input {
+        color: $primary-color;
+        background-color: $background-color;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid hsl(0, 0%,12%);
+        border-radius: 10px;
+        width: 100%;
+        font-weight: 300;
+    }
+
+    #content {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    #due_date {
+        width: auto;
+        color: #030303;
+        background-color: $primary-color;
+    }
+
+    #add-btn {
+        background-color: $primary-color;
+        color: $background-color;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+
+    h3 {
+        margin: 20px;
+        font-size: 25px;
+    }
+
+    table {
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        font-weight: 300;
+
+        th, td {
+            padding: 10px;
+            border: 1px solid hsl(0, 0%, 12%);
+            border-left: none;
+            border-right: none;
+        }
+
+        th {
+            background-color: hsl(0, 0%, 8%);
+            font-weight: 400;
+        }
+    }
+
+    #delete-btn {
+        background-color: $primary-color;
+        color: $background-color;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+
+    #edit-btn {
+        background-color: $background-color;
+        color: $primary-color;
+        padding: 5px 10px;
+        border: 1px solid hsl(0, 0%, 30%);
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 14px;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            border-color: hsl(0, 0%, 80%);
+        }
+    }
+
+    #update-btn {
+        background-color: $primary-color;
+        color: $background-color;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: darken($primary-color, 20%);
+        }
+    }
+}
