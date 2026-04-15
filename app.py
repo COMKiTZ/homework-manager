@@ -9,6 +9,7 @@ app = Flask(__name__)
 Scss(app)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 # Data Class ~ Row of data
@@ -21,7 +22,6 @@ class AllTasks(db.Model):
     
 with app.app_context():
     db.create_all()
-
 
 # routes to webpages
 @app.route("/", methods=["POST", "GET"])
@@ -71,5 +71,5 @@ def edit(id):
         return render_template('edit.html', task=task)
 
 # Runs and Debugs
-if __name__ in "__main__":
+if __name__ == "__main__":
     app.run(debug=True)
